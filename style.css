@@ -1,8 +1,13 @@
 *{
     font-family: Arial, Helvetica, sans-serif;
-    border: border-box;
+    box-sizing: border-box;
     margin: 0%;
 }
+
+body {
+    font-size: clamp(14px, 1.5vw, 18px);
+}
+
 
 .navbar{
     height: 60px;
@@ -14,8 +19,8 @@
 }
 
 .nav-logo{
-    height: 50px;
-    width: 130px;
+    width: 100px;
+    height: auto;
 }
 
 .logo{
@@ -184,26 +189,26 @@ span{
     background-color: #e2e7e6;
 }
 
-.box{
-    height:400px;
+.box {
+    min-width: 250px;
+    flex: 1 1 300px;
+    height: auto;
     width: 23%;
-    background-color: white;
-    padding: 20px 0px 15px;
-    margin-top: 1rem;
 }
 
+
 .box-img{
-    height: 130px;
-    width: 130px;
     background-size: cover;
     margin: 1rem;
+    max-width: 100%;
+    height: auto;
 }
 
 .box-imgs{
-    width: 300px;
-    height: 300px;
     background-size: cover;
     margin: 1rem;
+    max-width: 100%;
+    height: auto;
 }
 
 .box-images{
@@ -356,5 +361,43 @@ ul a{
     .logo {
         width: 80px;
         height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-search {
+        flex-direction: column;
+        height: auto;
+        width: 95%;
+    }
+
+    .search-select, .search-icon {
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    .panel-options a {
+        padding: 4px;
+        font-size: 12px;
+    }
+
+    .box {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .hero-section {
+        height: 200px;
+        background-position: center;
+    }
+
+    .foot-panel2 ul {
+        text-align: center;
+        width: 100%;
+    }
+
+    .nav-logo {
+        width: 80px;
+        height: auto;
     }
 }
